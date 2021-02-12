@@ -1,0 +1,56 @@
+<div class="example-container">
+  <div class="form-container">
+    <h1>{{ title }}</h1>
+    <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label> Firstname
+        </mat-label>
+        <input matInput formControlName="firstname" required>
+        <mat-error *ngIf="createForm.controls.firstname.touched && createForm.controls.firstname.invalid">
+          <span *ngIf="createForm.controls.firstname.errors?.required">This field is mandatory.</span>
+          <span *ngIf="createForm.controls.firstname.errors?.trimError">This field is invalid.</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label> Lastname
+        </mat-label>
+        <input matInput formControlName="lastname" required>
+        <mat-error *ngIf="createForm.controls.lastname.touched && createForm.controls.lastname.invalid">
+          <span *ngIf="createForm.controls.lastname.errors?.required">This field is mandatory.</span>
+          <span *ngIf="createForm.controls.lastname.errors?.trimError">This field is invalid.</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label> E-mail
+        </mat-label>
+        <input matInput formControlName="email" required>
+        <mat-error *ngIf="createForm.controls.email.touched && createForm.controls.email.invalid">
+          <span *ngIf="createForm.controls.email.errors?.required">This field is mandatory.</span>
+          <span *ngIf="createForm.controls.email.errors?.pattern">This field is invalid.</span>
+          <span *ngIf="createForm.controls.email.errors?.trimError">This field is invalid.</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label> Mobile
+        </mat-label>
+        <input matInput formControlName="mobile" required>
+        <mat-error *ngIf="createForm.controls.mobile.touched && createForm.controls.mobile.invalid">
+          <span *ngIf="createForm.controls.mobile.errors?.required">This field is mandatory.</span>
+          <span *ngIf="createForm.controls.mobile.errors?.pattern">This field is invalid.</span>
+          <span *ngIf="createForm.controls.mobile.errors?.trimError">This field is invalid.</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label> Address
+        </mat-label>
+        <input matInput formControlName="address" required>
+        <mat-error *ngIf="createForm.controls.address.touched && createForm.controls.address.invalid">
+          <span *ngIf="createForm.controls.address.errors?.required">This field is mandatory.</span>
+          <span *ngIf="createForm.controls.address.errors?.trimError">This field is invalid.</span>
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary" [routerLink]="['/list']">Cancel</button>
+      <button mat-raised-button color="primary" type="submit">Save</button>
+    </form>
+  </div>
+</div>

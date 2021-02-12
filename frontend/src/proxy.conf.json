@@ -1,0 +1,10 @@
+{
+  "/employees": {
+    "target": "http://localhost:8080/",
+    "secure": false
+  },
+  "/employee": {
+    "target": "http://localhost:8080/",
+    "secure": false
+  }
+}

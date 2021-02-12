@@ -1,0 +1,24 @@
+.example-container{
+  text-align: center
+}
+
+.form-container{
+  width: 30%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -moz-transform: translateX(-60%) translateY(-60%);
+  -webkit-transform: translateX(-60%) translateY(-60%);
+  transform: translateX(-60%) translateY(-60%);
+  padding: 20px;
+  border: lightgrey solid 0.2px;
+  border-radius: 5px;
+}
+
+.form-field{
+  display: block
+}
+
+button {
+  margin: 5px;
+}
